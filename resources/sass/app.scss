@@ -1,14 +1,35 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// Tailwind stuff
+@import "~tailwindcss/base";
+
+@import "~tailwindcss/components";
+
+@import "~tailwindcss/utilities";
+
+body {
+  font-family: 'Roboto Slab', serif;
 }
+
+.button {
+  @apply .bg-bluee .text-white .no-underline .rounded-lg .text-sm .py-2 .px-5;
+  box-shadow: 0 2px 7px 0 #b0eaff; 
+}
+
+.card {
+  @apply .bg-white .p-5 .rounded-lg .shadow;
+}
+
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }

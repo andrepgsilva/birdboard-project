@@ -7,7 +7,9 @@
 
 require('./bootstrap');
 
-// window.Vue = require('vue');
+window.Vue = require('vue');
+
+import VModal from 'vue-js-modal';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -17,6 +19,11 @@ require('./bootstrap');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-// const app = new Vue({
-//     el: '#app'
-// });
+Vue.use(VModal);
+Vue.component('new-project-modal', require('./components/NewProjectModal.vue'));
+Vue.component('dropdown', require('./components/Dropdown.vue').default());
+
+const app = new Vue({
+    el: '#app',
+});
+
